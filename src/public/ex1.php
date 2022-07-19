@@ -20,7 +20,7 @@ class Beverage {
       }*/
     
     public function getInfo() {
-        return "This beverage is {$this->temperature} and {$this->color}.";
+        return "This beverage is {$this->temperature} and {$this->color}.<br>";
       }
 
     public function get_temperature() {

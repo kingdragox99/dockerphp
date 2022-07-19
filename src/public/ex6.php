@@ -2,11 +2,15 @@
 
 declare(strict_types=1);
 
+<?php
+
+declare(strict_types=1);
+
 class Beverage {
     // Properties
-    protected $color = "";
-    protected $price = 0;
-    protected $temperature = "cold";
+    private $color = "";
+    private $price = 0;
+    private $temperature = "cold";
   
     // Methods
     public function __construct($color,$price,$temperature) {
@@ -26,8 +30,8 @@ class Beverage {
 
 class Beer extends Beverage {
 
-        protected $name = "";
-        protected $alcoholPercentage = 0;
+        private $name = "";
+        private $alcoholPercentage = 0;
 
         public function __construct($color,$price,$temperature,$name,$alcoholPercentage) {
             $this->color = $color;
@@ -44,23 +48,24 @@ class Beer extends Beverage {
         public function get_AlcoholPercentage() {
             return $this->alcoholPercentage;
           }
-
-        public function beerInfo() {
-            return "<br>Hi i'm {$this->name} and have an alcochol percentage of {$this->alcoholPercentage} and I have a {$this->color} color.";
-          }
   }
 
-  $Duvel = new Beer("light","3.5€","8C°","Duvel","8.5");
+  $cola = new Beverage("black", "2€","8C°");
+  $Duvel = new Beer("blond","3.5€","8C°","Duvel","8.5");
 
+  echo $cola->getInfo();
+  echo $cola->get_temperature();
   echo $Duvel->getAlcoholPercentage();
   echo $Duvel->get_AlcoholPercentage();
-  echo $Duvel->beerInfo();
 
-
-/* EXERCISE 4
-Copy the code of exercise 3 to here and delete everything related to cola. V
-TODO: Make all properties protected. V
-TODO: Make all the other prints work without error without changing the beverage class.
-TODO: Don't call getters in de child class.
-USE TYPEHINTING EVERYWHERE!
+/* EXERCISE 6
+Copy the classes of exercise 2. V
+TODO: Change the properties to private. V
+TODO: Make a const BARNAME with the value 'The Trooper'.
+TODO: Print the constant on the screen.
+TODO: Create a function in Beverage and use the constant.
+TODO: Do the same in the beer class.
+TODO: Print the output of these functions on the screen.
+TODO: Make sure that every print is on a new line.
+Use typehinting everywhere!
 */
