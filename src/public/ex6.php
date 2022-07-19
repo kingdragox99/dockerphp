@@ -2,10 +2,6 @@
 
 declare(strict_types=1);
 
-<?php
-
-declare(strict_types=1);
-
 class Beverage {
     // Properties
     private $color = "";
@@ -32,6 +28,8 @@ class Beer extends Beverage {
 
         private $name = "";
         private $alcoholPercentage = 0;
+
+        const BARNAME = 'The Trooper';
 
         public function __construct($color,$price,$temperature,$name,$alcoholPercentage) {
             $this->color = $color;
@@ -61,7 +59,7 @@ class Beer extends Beverage {
 /* EXERCISE 6
 Copy the classes of exercise 2. V
 TODO: Change the properties to private. V
-TODO: Make a const BARNAME with the value 'The Trooper'.
+TODO: Make a const BARNAME with the value 'The Trooper'. V
 TODO: Print the constant on the screen.
 TODO: Create a function in Beverage and use the constant.
 TODO: Do the same in the beer class.
